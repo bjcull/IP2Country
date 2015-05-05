@@ -41,4 +41,4 @@ If none are found it:
  - Stores them in the database
  
 ## Contact Me
-You can tweet me at @BenWhoLikesBeer for help or visit BenCull.com
+You can tweet me at [@BenWhoLikesBeer](https://twitter.com/BenWhoLikesBeer) for help or visit [BenCull.com](https://bencull.com)
