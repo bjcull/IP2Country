@@ -13,12 +13,12 @@ This contains the mapping between the IP Address blocks and their countries.
  
 3. Add the following table to your Sql Server database:
 
-	CREATE TABLE IpRecords
-	(
-		StartAddress VARBINARY(16) NOT NULL CONSTRAINT PK_IpRecords_StartAddress PRIMARY KEY,
-		EndAddress VARBINARY(16) NOT NULL,
-		CountryCode CHAR(2) NOT NULL
-	)
+    CREATE TABLE IpRecords
+    (
+        StartAddress VARBINARY(16) NOT NULL CONSTRAINT PK_IpRecords_StartAddress PRIMARY KEY,
+        EndAddress VARBINARY(16) NOT NULL,
+        CountryCode CHAR(2) NOT NULL
+    )
 
 4. Test it out! May I recommend the following test action:
 
