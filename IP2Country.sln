@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP2Country", "IP2Country\IP2Country.csproj", "{B1C1C44E-3BFF-40DA-BAF9-98020D2B8279}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{1A65222A-1090-47EE-99C4-E14FBC61C6F6}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet\content\App_Start\Ip2CountryStartup.cs.pp = NuGet\content\App_Start\Ip2CountryStartup.cs.pp
+		NuGet\content\Readme_Ip2Country.txt = NuGet\content\Readme_Ip2Country.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1C1C44E-3BFF-40DA-BAF9-98020D2B8279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C1C44E-3BFF-40DA-BAF9-98020D2B8279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C1C44E-3BFF-40DA-BAF9-98020D2B8279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C1C44E-3BFF-40DA-BAF9-98020D2B8279}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
