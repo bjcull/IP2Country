@@ -13,25 +13,25 @@ This contains the mapping between the IP Address blocks and their countries.
  
 3. Add the following table to your Sql Server database:
 
-    CREATE TABLE IpRecords
-    (
-        StartAddress VARBINARY(16) NOT NULL CONSTRAINT PK_IpRecords_StartAddress PRIMARY KEY,
-        EndAddress VARBINARY(16) NOT NULL,
-        CountryCode CHAR(2) NOT NULL
-    )
+        CREATE TABLE IpRecords
+        (
+            StartAddress VARBINARY(16) NOT NULL CONSTRAINT PK_IpRecords_StartAddress PRIMARY KEY,
+            EndAddress VARBINARY(16) NOT NULL,
+            CountryCode CHAR(2) NOT NULL
+        )
 
 4. Test it out! May I recommend the following test action:
 
-    public async Task<ActionResult> TestIPLookup(string ip)
-    {
-        var result = await IpLookup.Current.GetCountryFromIp(ip);
-
-        return Json(new
+        public async Task<ActionResult> TestIPLookup(string ip)
         {
-            CountryCode = result,
-            CountryName = new RegionInfo(result).DisplayName
-        }, JsonRequestBehavior.AllowGet);
-    }
+            var result = await IpLookup.Current.GetCountryFromIp(ip);
+    
+            return Json(new
+            {
+                CountryCode = result,
+                CountryName = new RegionInfo(result).DisplayName
+            }, JsonRequestBehavior.AllowGet);
+        }
     
 ## Under the hood
 When your application starts, the library will attempt to access the database and check for existing records.
