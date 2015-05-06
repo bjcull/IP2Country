@@ -36,7 +36,23 @@ namespace IP2Country
             }
         }
 
-        public async Task<string> GetCountryFromIp(string ipAddress)
+        public string GetCountryFromIp(string ipAddress)
+        {
+            var ip = IPAddress.Parse(ipAddress).MapToIPv6();
+            using (var db = new IpDbContext(_databaseConnectionName))
+            {
+                var record = db.IpRecords.SqlQuery("SELECT TOP 1 * FROM IpRecords WHERE StartAddress <= @p0 ORDER BY StartAddress DESC", ip.GetAddressBytes()).FirstOrDefault();
+
+                if (record == null)
+                {
+                    return null;
+                }
+
+                return record.CountryCode;
+            }
+        }
+
+        public async Task<string> GetCountryFromIpAsync(string ipAddress)
         {
             var ip = IPAddress.Parse(ipAddress).MapToIPv6();
             using (var db = new IpDbContext(_databaseConnectionName))

@@ -22,9 +22,9 @@ This contains the mapping between the IP Address blocks and their countries.
 
 4. Test it out! May I recommend the following test action:
 
-    public async Task<ActionResult> TestIPLookup(string ip)
+    public ActionResult TestIPLookup(string ip)
     {
-        var result = await IpLookup.Current.GetCountryFromIp(ip);
+        var result = IpLookup.Current.GetCountryFromIp(ip);
 
         return Json(new
         {
